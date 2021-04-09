@@ -1,0 +1,13 @@
+.header {
+    background-color:rgb(95, 92, 92);
+    color: white;
+    text-align: center;
+    padding-bottom: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+
+.search-history-card {
+    margin-top: 15px;
+    padding-top: 15px;
+}
