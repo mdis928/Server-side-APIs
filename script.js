@@ -18,26 +18,22 @@ var icon5day = [];
 
 
 
-
-
-
-
 // Three ajax calls for the weather, UV index, and the five day forcast
-function cityWeatherInfo (city) {
-    var weatherApiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + locationCurrent + "&APPID=" + apikey;
+function cityWeatherInfo () {
+    var weatherApiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=Philadelphia,PA,USA&appid=a1b741a4db22b397c16b70d7a9b62d4e";
         $.ajax({
-            url:currentUrl,
+            url:weatherApiUrl,
             method:"GET",
         })
         .then (function(response){
-            temperature = ((response.main.temp)-273.15) * 9/5 + 32;
-            temperature = temperature.tofixed(2);
-            humidity = response.main.humidity;
-            wind = response.wind.speed;
-            latCurrent = response.coord.lat;
-            lonCurrent = response.coord.lon;
+            console.log (response)
+            temperature = response.current.temp;
+            humidity = response.current.humidity;
+            wind = response.current.wind_speed;
+            latCurrent = response.lat;
+            lonCurrent = response.lon;
 
-    var weatherApiUrl = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + latCurrent + "&lon=" + lonCurrent;
+    var weatherApiUrl = "https://api.openweathermap.org/data/2.5/onecall?" + apikey + "&lat=" + latCurrent + "&lon=" + lonCurrent;
         $.ajax({
            url: weatherApiUrl,
            method: "GET",
@@ -54,8 +50,8 @@ function cityWeatherInfo (city) {
         $("#UVCurrent").text("UV Index: " + UV);
         })
 
-    var weatherApiUrl = "https://api.openweathermap.org/data/2.5/forecast?appid=" + apiKey + "&q=" + locationCurrent;
-        $ajax({
+    var weatherApiUrl = "https://api.openweathermap.org/data/2.5/forecast?appid=" + apikey + "&q=" + locationCurrent;
+        $.ajax({
             url: weatherApiUrl,
             method: "Get",
         })
@@ -75,22 +71,22 @@ function cityWeatherInfo (city) {
             $("#temp1").text("Temperature: " + temp5day + " F");
             $("#humid1").text("Humidity: " + humidity5day + " %");
             $("#icon1").text("Current weather: " + icon5day + " ");
-            // $(this).append(date5day[0]);
+
             $("#date2").text("Date: " + date5day[8] + " ");
             $("#temp2").text("Temperature: " + temp5day[8] + " F");
             $("#humid2").text("Humidity: " + humidity5day[8] + " %");
             $("#icon2").text("Current weather: " + icon5day + " ");
-            // $(this).append(date5day[8]);
+
             $("#date3").text("Date: " + date5day[16] + " ");
             $("#temp3").text("Temperature: " + temp5day + " F");
             $("#humid3").text("Humidity: " + humidity5day + " %");
             $("#icon3").text("Current weather: " + icon5day + " ");
-            // $(this).append(date5day[16]);
+
             $("#date4").text("Date: " + date5day[24] + " ");
             $("#temp4").text("Temperature: " + temp5day + " F");
             $("#humid4").text("Humidity: " + humidity5day + " %");
             $("#icon4").text("Current weather: " + icon5day + " ");
-            // $(this).append(date5day[24]);
+
             $("date5").text("Date: " + date5day[32] + " ");
             $("#temp5").text("Temperature: " + temp5day + " F");
             $("#humid5").text("Humidity: " + humidity5day + " %");
@@ -123,7 +119,7 @@ function pop5day(){
     }
 }
 
-$("#add-city").on("click", function (event) {
+$("#username").on("click", function (event) {
     event.preventDefault();
     var city = $("#city-input").val();
     cities.push(city);
@@ -131,14 +127,14 @@ $("#add-city").on("click", function (event) {
     var recordNumber = $("#recordNumber").val();
 
     renderButtons();
-    displayCityInfo();
+    cityWeatherInfo();
     pop5day();
 });
 
 $("#buttons-view").on("click", "button", function (){
     locationCurrent = $(this).attr("data-name");
     console.log(locationCurrent);
-    displayCityInfo();
+    cityWeatherInfo();
 })
 renderButtons();
 })
