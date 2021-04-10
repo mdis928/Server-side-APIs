@@ -33,11 +33,71 @@
         </div>
 
         <div class="col-12 col-md-8">
-            <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
+            <h3 class="subtitle">City Info <span id="repo-search-term"></span></h3>
             <!-- There needs to be an empty HTML element for us to write repository data to. -->
             <div id="repos-container" class="list-group"></div>
+        </div>
+
+       <h3>Five Day Forecast</h3>
+       <div class="row row-cols-1 row-cols-md-5">
+        <div class="col mb-4">
+          <div class="five-day-forecast-card">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title" id ="date1"></h5>
+              <p class="card-text" id="temp1"></p>
+              <p class="card-text" id= "humid1"></p>
+              <img class="card-text" id="icon1" src="https://openweathermap.org/weather-conditions" alt="weather icon">
+            </div>
           </div>
-        </main>
+        </div>
+        <div class="col mb-4">
+          <div class="five-day-forecast-card">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title" id="date2"></h5>
+              <p class="card-text" id="temp2"></p>
+              <p class="card-text" id="humid2"></p>
+              <img class="card-text" id="icon2" src="https://openweathermap.org/weather-conditions" alt= "weather icon"></img>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="five-day-forecast-card">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title" id="date3"></h5>
+              <p class="card-text" id="temp3"></p>
+              <p class="card-text" id="humid3"></p>
+              <img class="card-text" id="icon3" src= "https://openweathermap.org/weather-conditions" alt= "weather icon"></img>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="five-day-forecast-card">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title" id="date4"></h5>
+              <p class="card-text" id="temp4"></p>
+              <p class="card-text" id="humid4"></p>
+              <img class="card-text" id="icon4" src="https://openweathermap.org/weather-conditions" alt="weather icon"></img>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+            <div class="five-day-forecast-card">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title" id="date5"></h5>
+                <p class="card-text" id="temp5"></p>
+                <p class="card-text" id="humid5"></p>
+                <img class="card-text" id="icon5" src="https://openweathermap.org/weather-conditions" alt="weather icon"></img>
+              </div>
+            </div>
+          </div>
+      </div>
+
+        
 
      
 
@@ -57,6 +117,6 @@
 
 
 
-
-
+<script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
+<script src="./script.js"></script>
 </Body>

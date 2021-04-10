@@ -1,5 +1,5 @@
 .header {
-    background-color:rgb(95, 92, 92);
+    background-color:rgb(20, 20, 20);
     color: white;
     text-align: center;
     padding-bottom: 25px;
@@ -10,4 +10,9 @@
 .search-history-card {
     margin-top: 15px;
     padding-top: 15px;
+}
+
+.five-day-forecast-card {
+    background: blue;
+    color: white;
 }
