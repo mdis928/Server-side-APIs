@@ -21,6 +21,7 @@
     margin-right: 1572px;
     padding-bottom: 10px;
     margin-top: 10px;
+    flex-direction: column;
 }
 
 .five-day-container {
@@ -30,6 +31,8 @@
     margin-right: 1572px;
     padding-bottom: 10px;
     margin-top: 10px;
+    flex-direction: column;
+    display: flex;
 }
 
 .card-row {
