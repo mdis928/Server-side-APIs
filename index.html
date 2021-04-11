@@ -1,102 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <title>Server-Side-APIs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Server Side API</title>
 </head>
+<body>
 
-<Body>
-<Header>
-    <h1 class="header">Weather Dashboard</h1>
-</Header>
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+    </header>
 
-<main>
-    <div class="col-12 col-md-4">
-
-        <div class="card">
-          <h3 class="card-header text-uppercase">Search By City Name</h3>
-          <form id="user-form" class="card-body">
-            <label class="form-label" for="username"></label>
-            <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-            <button type="submit" class="btn">🔍</button>
-          </form>
-        </div>
-
-        <div class="search-history-card">
-            <h3 class="">Search History</h3>
-            <div id="buttons-view" class="card-body"></div>
-        </div>
-
-        <div class="col-12 col-md-8">
-            <h3 class="" id="locationCurrent">Current City Info</h3>
-            <p class="tempCurrent">Temperature</p>
-            <p class="humidCurrent">Humidity</p>
-            <p class="windCurrent">Wind Speed</p>
-            <p class="UVCurrent">UV Index</p>
-        </div>
-
-       <h3>Five Day Forecast</h3>
-       <div class="row row-cols-1 row-cols-md-5">
-        <div class="col mb-4">
-          <div class="five-day-forecast-card">
-
-            <div class="card-body">
-              <h5 class="card-title" id ="date1"></h5>
-              <p class="card-text" id="temp1"></p>
-              <p class="card-text" id= "humid1"></p>
-              <img class="card-text" id="icon1" alt="weather icon">
+    <div class="container">
+        <div class="search">
+            <div class="row">
+                <h1>Search for a City</h1>
             </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="five-day-forecast-card">
-            <div class="card-body">
-              <h5 class="card-title" id="date2"></h5>
-              <p class="card-text" id="temp2"></p>
-              <p class="card-text" id="humid2"></p>
-              <img class="card-text" id="icon2"  alt= "weather icon"></img>
+            <div class="row">
+                <input type="text" class="searchInput" placeholder="Harrisburg">
+                <button type="submit" class="searchBtn">Search
+                <i class="fas fa-search"></i>
+                </button>
             </div>
-          </div>
+            <div class="historyItems"></div>
         </div>
-        <div class="col mb-4">
-          <div class="five-day-forecast-card">
-            <div class="card-body">
-              <h5 class="card-title" id="date3"></h5>
-              <p class="card-text" id="temp3"></p>
-              <p class="card-text" id="humid3"></p>
-              <img class="card-text"   alt= "weather icon"></img>
+        <div class="col-two-container">
+            <div class="forecast">
+                <div class="row">
+                    <h1 class="locationName">City Name</h1>
+                    <h1 class="currentDate"></h1>
+                    <img class="weatherIcon"></img>
+                </div>
+                <div class="row">
+                    <p class="temperature">Temperature:</p>
+                </div>
+                <div class="row">
+                    <p class="humidity">Humidity:</p>
+                </div>
+                <div class="row">
+                    <p class="windSpeed">Wind Speed:</p>
+                </div>
+                <div class="row">
+                    <p class="uvIndex">UV Index:</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col mb-4">
-          <div class="five-day-forecast-card">
-            <div class="card-body">
-              <h5 class="card-title" id="date4"></h5>
-              <p class="card-text" id="temp4"></p>
-              <p class="card-text" id="humid4"></p>
-              <img class="card-text" id="icon4"  alt="weather icon"></img>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-            <div class="five-day-forecast-card">
-              <div class="card-body">
-                <h5 class="card-title" id="date5"></h5>
-                <p class="card-text" id="temp5"></p>
-                <p class="card-text" id="humid5"></p>
-                <img class="card-text" id="icon5"  alt="weather icon"></img>
-              </div>
-            </div>
+        <div class="five-day-container">
+          <h1 class="dayForecast">5-Day Forecast</h1>
+          <div class="card-row">
           </div>
       </div>
-
-</main>
-
-<script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
-<script src="./script.js"></script>
-</Body>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

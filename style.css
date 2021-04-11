@@ -1,18 +1,45 @@
 .header {
-    background-color:rgb(20, 20, 20);
+    background-color: black;
     color: white;
     text-align: center;
-    padding-bottom: 25px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 50px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.search-history-card {
-    margin-top: 15px;
-    padding-top: 15px;
+.search {
+    border: 1px solid black;
+    border-radius: 1px;
+    padding-left: 10px ;
+    margin-right: 1572px;
+    padding-bottom: 10px;
 }
 
-.five-day-forecast-card {
-    background: blue;
-    color: white;
+.col-two-container {
+    border: 1px solid black;
+    border-radius: 1px;
+    padding-left: 10px ;
+    margin-right: 1572px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.five-day-container {
+    border: 1px solid black;
+    border-radius: 1px;
+    padding-left: 10px ;
+    margin-right: 1572px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.card-row {
+    margin-right: 45px;
+    margin-left: 10px;
+    padding-left: 10px;
+
+}
+
+.five-day-card {
+    background-color: blue;
+    color: white; 
 }
